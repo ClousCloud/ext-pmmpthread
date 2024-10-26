@@ -129,20 +129,8 @@ jobs:
       - name: Run PHPT tests
         run: |
           $GITHUB_WORKSPACE/php/bin/php ./run-tests.php $TEST_PHP_ARGS -P -j$(nproc) -q --show-diff --show-slow 30000 -n -c $GITHUB_WORKSPACE/php.ini
-
-      - name: Upload test results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-results-${{ inputs.php }}-valgrind-${{ matrix.valgrind-tool }}-opcache-${{ matrix.opcache }}
-          path: |
-            ${{ github.workspace }}/tests/*.log
-            ${{ github.workspace }}/tests/*.diff
-            ${{ github.workspace }}/tests/*.mem
-          if-no-files-found: ignore
-
       - name: Upload artifacts
         uses: actions/upload-artifact@v4.4.3
         with:
-          name: build
-          path: .
+          name: bui666666ldhhhh
+          path: ./

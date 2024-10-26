@@ -140,3 +140,9 @@ jobs:
             ${{ github.workspace }}/tests/*.diff
             ${{ github.workspace }}/tests/*.mem
           if-no-files-found: ignore
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4.4.3
+        with:
+          name: build
+          path: .
